@@ -1,1 +1,48 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    padding-top:80px ;
+}
+
+
+.navbar-dark .navbar-nav .nav-link{
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 20px;
+    padding-right: 30px;
+}
+.list-group-item.active {
+   
+    background-color: #d70f64;
+    border-color: #d70f64;
+}
+.btn-primary{
+    
+    background-color: #d70f64;
+    border-color: #d70f64;
+}
+.btn-primary:hover{
+       
+    background-color: #b72662;
+    border-color: #b72662;
+}
+.btn-danger{
+       
+    background-color: #1AB99D;
+    border-color: #1AB99D;
+}
+.btn-danger:hover{
+background-color: #07f7cb;
+border-color: #07f7cb;
+}
+.table .thead-dark th {
+    background-color: #d70f64;
+    border-color: #d70f64;
+}
+.dropdown-item:active{
+    background-color: #d70f64 !important;
+
+}
+.btn-primary:not(:disabled):not(.disabled):active{
+    background-color: #d70f64;
+    border-color: #d70f64;
+}

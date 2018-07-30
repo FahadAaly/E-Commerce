@@ -1,0 +1,12 @@
+.card{
+    width: 300px;
+    margin-bottom: 40px;
+}
+.card-footer{
+    padding: 0;
+}
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}

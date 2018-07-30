@@ -1,0 +1,16 @@
+.form-control{
+    width: 80%;
+}
+.input-group{
+    width: 80%;
+}
+.alert{
+    width: 60%;
+    margin-top: 40px;
+}
+.col-md-6{
+    float: left;
+}
+ .btn-primary{
+    margin-right: 10px;
+}

@@ -1,0 +1,67 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="container">
+    
+      <div class="col-md-6">
+          <form>
+              <div class="form-group">
+                <label for="title" >Title</label>
+                <input type="text" name="title" class="form-control" #title="ngModel"  [(ngModel)]="createProducts.title" [ngModelOptions]="{standalone: true}">
+              </div>
+      
+              <div class="form-group">
+                <label for="title" >Price</label>
+           
+                
+                    <div class="input-group">
+                   <div class="input-group-prepend">
+                     <span class="input-group-text">Rs.</span>
+                    </div>
+                        <input type="number" class="form-control"  #price="ngModel"[(ngModel)]="createProducts.price" [ngModelOptions]="{standalone: true}">
+         
+                      </div>
+              </div>
+
+              <div class="form-group">
+                <label for="title" >Category</label>
+
+                <select name="category" class="form-control"  [(ngModel)]="createProducts.category">
+                 
+                  <option *ngFor="let c of category" [value]="">
+                    {{c.name}}
+                  </option>
+                 
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="title" >ImageUrl</label>
+                <input type="text" name="imageUrl" #imageUrl="ngModel" class="form-control"  [(ngModel)]="createProducts.imageUrl" [ngModelOptions]="{standalone: true}">
+              </div>
+              <button class="btn btn-primary" (click)="saveProducts()">Save</button>
+              <div *ngIf="success" class="alert alert-success" role="alert">
+                Data has been Submitted Successfully
+              </div>
+              <div *ngIf="alert" class="alert alert-danger" role="alert">
+                This is a danger alert—check it out!
+              </div>
+              <div *ngIf="edit" class="alert alert-success" role="alert">
+                Updated Successfully
+              </div>
+              <button *ngIf="!show" class="btn btn-danger" (click)="delete()">Delete</button>
+            </form>
+     
+          </div>
+      <div class="col-md-6">
+          <div class="card" style="width: 30rem;">
+              <img class="card-img-top" [src]="imageUrl.value" *ngIf="imageUrl.value">
+              <div class="card-body">
+                <h5 class="card-title">{{title.value}}</h5>
+                <p class="card-text">{{price.value | currency:"Rs."}}</p>
+                
+              </div>
+            </div>
+    </div>
+  </div>
+</div>
+</div>

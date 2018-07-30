@@ -1,0 +1,29 @@
+
+<div class="conatiner-fluid">
+  <div class="row">
+    <div class="container">
+      
+      <form>
+      
+          <div class="col-sm-4">
+           
+              <label for="name">Email:</label>
+              <input type="text" class="form-control" name="email"  [(ngModel)]="registerUserData.email">
+             </div> 
+            <div class="col-sm-4">
+                <label for="position">Password</label>
+                <input type="text" class="form-control" name="password"  [(ngModel)]="registerUserData.password">
+          
+            </div>
+            
+            <button class="btn btn-primary col-sm-4" (click)="registerUser()">Submit</button>
+           
+            </form>
+    </div>
+  </div>
+ 
+   
+ 
+
+</div>
+

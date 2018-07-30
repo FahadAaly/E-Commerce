@@ -1,0 +1,55 @@
+<div class="container-fluid">
+  <div class="row">
+      <div class="container">
+          
+     <h3>Shopping List Cart</h3>
+
+          <table class="table">
+                  <thead class="thead-dark">
+                    <tr>
+                      
+                      <th scope="col">Title</th>
+                      <th scope="col">Price</th>
+                      <th scope="col" class="text-center">Quantity</th>
+                      <th scope="col"></th>
+                      <th scope="col"></th>
+                    </tr>
+                      
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let p of product ; let i = index">
+                      
+                      <td>{{p.title}}</td>
+                      <td>{{p.totalPrice | currency:"Rs."}}</td>
+                      <td class="text-center">
+                          <button class="btn btn-default"  (click)="add(p.id)"  style="font-size:10px">
+                              <i class="fa fa-plus"></i>
+                          </button>
+                          {{p.quantity }}
+                          <button class="btn btn-default"  (click)="delete(p.id)" style="font-size:10px"> 
+                              <i class="fa fa-minus"></i>
+                            </button>
+                          
+                       </td>
+
+
+                      <td>
+                         <button class="btn btn-danger" (click)="remove(p.id)">Remove</button>
+                      </td>
+                      <td>
+                      
+                     </td>
+                     
+                    </tr>
+                    
+                  </tbody>
+                </table>
+
+                <button class="btn btn-primary" (click)="postProduct()">CheckOut</button>
+      </div>
+  </div>
+</div>
+
+
+
+

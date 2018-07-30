@@ -1,0 +1,34 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="container">
+            
+           <p> 
+               <a routerLink="/admin/products/new" class="btn btn-primary">New Product</a>
+                 </p>
+
+            <table class="table">
+                    <thead class="thead-dark">
+                      <tr>
+                        
+                        <th scope="col">Title</th>
+                        <th scope="col">Price</th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let p of products">
+                        
+                        <td>{{p.title}}</td>
+                        <td>{{p.price  | currency:"Rs." }}</td>
+                        <td>
+                            <a [routerLink]="['/admin/products/',p.id]" class="edit">Edit</a>
+                        </td>
+                       
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+        </div>
+    </div>
+</div>
